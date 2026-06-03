@@ -1,0 +1,21 @@
+{
+  "id": 119,
+  "name": "آشفتهٔ شیرازی",
+  "description": null,
+  "fullUrl": "/ashofte",
+  "rootCatId": 2526,
+  "nickname": "آشفتهٔ شیرازی",
+  "published": true,
+  "imageUrl": "/api/ganjoor/poet/image/ashofte.gif",
+  "birthYearInLHijri": 1200,
+  "validBirthDate": true,
+  "deathYearInLHijri": 1288,
+  "validDeathDate": true,
+  "pinOrder": 0,
+  "birthPlace": "شیراز",
+  "birthPlaceLatitude": 29.5926,
+  "birthPlaceLongitude": 52.5836,
+  "deathPlace": "نجف",
+  "deathPlaceLatitude": 32.0107,
+  "deathPlaceLongitude": 44.3265
+}
