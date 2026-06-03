@@ -136,13 +136,10 @@ class GanjoorCrawler:
         ].append(poet_id)
 
         self.save_state()
-        
+                
     def crawl_all(self):
-
         poets = self.client.get_poets()
-
         for poet in poets:
-
             self.crawl_poet(
                 poet
             )

@@ -1,0 +1,522 @@
+{
+  "poet": {
+    "id": 148,
+    "name": "آذر بیگدلی",
+    "description": "حاج لطفعلی بیگ شاملو (زادهٔ ۱۱۳۴ هجری قمری در اصفهان - درگذشتهٔ ۱۱۹۵ هجری قمری در قم) متخلص به «آذر» و معروف به «آذر بِیگدلی»شاعر و صاحب تذکرهٔ آتشکدهٔ آذر در شرح حال شعرا است که آن را در طی ۳۰ سال به نام کریم خان زند گردآوری و تألیف کرده‌است.\r\nوی در ایّام کودکی او به سبب بروز فتنهٔ محمود افغان خانواده‌اش به ناچار از اصفهان به قم مهاجرت کرد؛ و پس از ۱۴ سال زندگی در قم با پدر خود که به حکومت لار منصوب شده بود، به فارس رفت، ولی ۲ سال بعد، پس از مرگ پدر، با عمّ خود عازم سفر حج و زیارت عتبات شد و پس از مراجعت به خراسان رفت. در خراسان به اردوی نادرشاه پیوست و همراه اردوی نادری از راه مازندران به آذربایجان رفت. پس از این سفر، عازم عراق عجم شد و در اصفهان سکنی گزید، و چندی به خدمت دیوانی مشغول شد، لیکن سرانجام از امور دیوانی کناره گرفت و به تصوّف روی آورد و به سلوک پرداخت و در پایان عمر در شهر قم اقامت کرد و در همان‌جا درگذشت و به خاک سپرده شد.\r\nآذر در آغاز شاعری «واله» و «نکهت» تخلّص می‌کرد، ولی بعداً تخلّص «آذر» را برای خود برگزید. وی با کسانی چون شعله و مشتاق و هاتف و شاعران دیگری که نهضت بازگشت ادبی را بنیاد نهاده بودند، مصاحبت و همکاری داشت و در شیوهٔ شاعری از «طرز فصحای متقدّمین» پیروی می‌کرد.\r\nوی علاوه بر دیوان اشعار، مشتمل بر ده هزار بیت، یک مثنوی به نام یوسف و زلیخا دارد که به شیوهٔ یوسف و زلیخای جامی سروده است. مثنوی دیگری نیز به نام گنجینه به تقلید بوستان سعدی به او منسوب است.\r\nدیوان اشعار وی از روی نسخهٔ آماده شده به همت مرکز تحقیقات رایانه‌ای حوزه علمیه اصفهان در گنجور در دسترس قرار گرفته است.",
+    "fullUrl": "/azar",
+    "rootCatId": 2738,
+    "nickname": "آذر بیگدلی",
+    "published": true,
+    "imageUrl": "/api/ganjoor/poet/image/azar.gif",
+    "birthYearInLHijri": 1134,
+    "validBirthDate": true,
+    "deathYearInLHijri": 1195,
+    "validDeathDate": true,
+    "pinOrder": 0,
+    "birthPlace": "اصفهان",
+    "birthPlaceLatitude": 32.6539,
+    "birthPlaceLongitude": 51.666,
+    "deathPlace": "قم",
+    "deathPlaceLatitude": 34.6416,
+    "deathPlaceLongitude": 50.8746
+  },
+  "cat": {
+    "id": 2746,
+    "title": "حکایات",
+    "urlSlug": "hekayat",
+    "fullUrl": "/azar/divan/hekayat",
+    "tableOfContentsStyle": 2,
+    "catType": 0,
+    "description": null,
+    "descriptionHtml": null,
+    "mixedModeOrder": 0,
+    "published": false,
+    "bookName": null,
+    "rImageId": null,
+    "sumUpSubsGeoLocations": false,
+    "mapName": null,
+    "next": null,
+    "previous": {
+      "id": 2745,
+      "title": "مثنویات",
+      "urlSlug": "masnavi",
+      "fullUrl": "/azar/divan/masnavi",
+      "tableOfContentsStyle": 2,
+      "catType": 0,
+      "description": null,
+      "descriptionHtml": null,
+      "mixedModeOrder": 0,
+      "published": false,
+      "bookName": null,
+      "rImageId": null,
+      "sumUpSubsGeoLocations": false,
+      "mapName": null,
+      "next": null,
+      "previous": null,
+      "ancestors": null,
+      "children": null,
+      "poems": null,
+      "paperSources": null,
+      "newImage": null
+    },
+    "ancestors": [
+      {
+        "id": 2738,
+        "title": "آذر بیگدلی",
+        "urlSlug": "azar",
+        "fullUrl": "/azar",
+        "tableOfContentsStyle": 1,
+        "catType": 0,
+        "description": "حاج لطفعلی بیگ شاملو (زادهٔ ۱۱۳۴ هجری قمری در اصفهان - درگذشتهٔ ۱۱۹۵ هجری قمری در قم) متخلص به «آذر» و معروف به «آذر بِیگدلی»شاعر و صاحب تذکرهٔ آتشکدهٔ آذر در شرح حال شعرا است که آن را در طی ۳۰ سال به نام کریم خان زند گردآوری و تألیف کرده‌است.\r\nوی در ایّام کودکی او به سبب بروز فتنهٔ محمود افغان خانواده‌اش به ناچار از اصفهان به قم مهاجرت کرد؛ و پس از ۱۴ سال زندگی در قم با پدر خود که به حکومت لار منصوب شده بود، به فارس رفت، ولی ۲ سال بعد، پس از مرگ پدر، با عمّ خود عازم سفر حج و زیارت عتبات شد و پس از مراجعت به خراسان رفت. در خراسان به اردوی نادرشاه پیوست و همراه اردوی نادری از راه مازندران به آذربایجان رفت. پس از این سفر، عازم عراق عجم شد و در اصفهان سکنی گزید، و چندی به خدمت دیوانی مشغول شد، لیکن سرانجام از امور دیوانی کناره گرفت و به تصوّف روی آورد و به سلوک پرداخت و در پایان عمر در شهر قم اقامت کرد و در همان‌جا درگذشت و به خاک سپرده شد.\r\nآذر در آغاز شاعری «واله» و «نکهت» تخلّص می‌کرد، ولی بعداً تخلّص «آذر» را برای خود برگزید. وی با کسانی چون شعله و مشتاق و هاتف و شاعران دیگری که نهضت بازگشت ادبی را بنیاد نهاده بودند، مصاحبت و همکاری داشت و در شیوهٔ شاعری از «طرز فصحای متقدّمین» پیروی می‌کرد.\r\nوی علاوه بر دیوان اشعار، مشتمل بر ده هزار بیت، یک مثنوی به نام یوسف و زلیخا دارد که به شیوهٔ یوسف و زلیخای جامی سروده است. مثنوی دیگری نیز به نام گنجینه به تقلید بوستان سعدی به او منسوب است.\r\nدیوان اشعار وی از روی نسخهٔ آماده شده به همت مرکز تحقیقات رایانه‌ای حوزه علمیه اصفهان در گنجور در دسترس قرار گرفته است.",
+        "descriptionHtml": "<p>حاج لطفعلی بیگ شاملو (زادهٔ ۱۱۳۴ هجری قمری در اصفهان - درگذشتهٔ ۱۱۹۵ هجری قمری در قم) متخلص به &laquo;آذر&raquo; و معروف به &laquo;آذر بِیگدلی&raquo;شاعر و صاحب تذکرهٔ آتشکدهٔ آذر در شرح حال شعرا است که آن را در طی ۳۰ سال به نام کریم خان زند گردآوری و تألیف کرده&zwnj;است.</p>\r\n<p>وی در ایّام کودکی او به سبب بروز فتنهٔ محمود افغان خانواده&zwnj;اش به ناچار از اصفهان به قم مهاجرت کرد؛ و پس از ۱۴ سال زندگی در قم با پدر خود که به حکومت لار منصوب شده بود، به فارس رفت، ولی ۲ سال بعد، پس از مرگ پدر، با عمّ خود عازم سفر حج و زیارت عتبات شد و پس از مراجعت به خراسان رفت. در خراسان به اردوی نادرشاه پیوست و همراه اردوی نادری از راه مازندران به آذربایجان رفت. پس از این سفر، عازم عراق عجم شد و در اصفهان سکنی گزید، و چندی به خدمت دیوانی مشغول شد، لیکن سرانجام از امور دیوانی کناره گرفت و به تصوّف روی آورد و به سلوک پرداخت و در پایان عمر در شهر قم اقامت کرد و در همان&zwnj;جا درگذشت و به خاک سپرده شد.</p>\r\n<p>آذر در آغاز شاعری &laquo;واله&raquo; و &laquo;نکهت&raquo; تخلّص می&zwnj;کرد، ولی بعداً تخلّص &laquo;آذر&raquo; را برای خود برگزید. وی با کسانی چون شعله و مشتاق و هاتف و شاعران دیگری که نهضت بازگشت ادبی را بنیاد نهاده بودند، مصاحبت و همکاری داشت و در شیوهٔ شاعری از &laquo;طرز فصحای متقدّمین&raquo; پیروی می&zwnj;کرد.</p>\r\n<p>وی علاوه بر دیوان اشعار، مشتمل بر ده هزار بیت، یک مثنوی به نام یوسف و زلیخا دارد که به شیوهٔ یوسف و زلیخای جامی سروده است. مثنوی دیگری نیز به نام گنجینه به تقلید بوستان سعدی به او منسوب است.</p>\r\n<p>دیوان اشعار آذر بیگدلی از روی <a href=\"http://chekameh.net/poet/79\">نسخهٔ آماده شده به همت مرکز تحقیقات رایانه&zwnj;ای حوزه علمیه اصفهان</a> در گنجور در دسترس قرار گرفته است.</p>",
+        "mixedModeOrder": 0,
+        "published": false,
+        "bookName": null,
+        "rImageId": null,
+        "sumUpSubsGeoLocations": false,
+        "mapName": null,
+        "next": null,
+        "previous": null,
+        "ancestors": null,
+        "children": null,
+        "poems": null,
+        "paperSources": null,
+        "newImage": null
+      },
+      {
+        "id": 2739,
+        "title": "دیوان اشعار",
+        "urlSlug": "divan",
+        "fullUrl": "/azar/divan",
+        "tableOfContentsStyle": 1,
+        "catType": 1,
+        "description": null,
+        "descriptionHtml": null,
+        "mixedModeOrder": 0,
+        "published": false,
+        "bookName": null,
+        "rImageId": null,
+        "sumUpSubsGeoLocations": false,
+        "mapName": null,
+        "next": null,
+        "previous": null,
+        "ancestors": null,
+        "children": null,
+        "poems": null,
+        "paperSources": null,
+        "newImage": null
+      }
+    ],
+    "children": [],
+    "poems": [
+      {
+        "id": 119125,
+        "title": "شمارهٔ ۱",
+        "urlSlug": "sh1",
+        "excerpt": "شبی می‌گذشتم ز ویرانه‌ای",
+        "mainSections": null
+      },
+      {
+        "id": 119126,
+        "title": "شمارهٔ ۲",
+        "urlSlug": "sh2",
+        "excerpt": "یکی کوه دیدم هم از دست راست",
+        "mainSections": null
+      },
+      {
+        "id": 119127,
+        "title": "شمارهٔ ۳",
+        "urlSlug": "sh3",
+        "excerpt": "کشاورزی از هر طرف دشت کاو",
+        "mainSections": null
+      },
+      {
+        "id": 119128,
+        "title": "شمارهٔ ۴",
+        "urlSlug": "sh4",
+        "excerpt": "بجایش یکی باغ دیدم شگرف",
+        "mainSections": null
+      },
+      {
+        "id": 119129,
+        "title": "شمارهٔ ۵",
+        "urlSlug": "sh5",
+        "excerpt": "یک آتشکده دیدم افروخته",
+        "mainSections": null
+      },
+      {
+        "id": 119130,
+        "title": "شمارهٔ ۶",
+        "urlSlug": "sh6",
+        "excerpt": "دگرباره دیدم بجای کنشت",
+        "mainSections": null
+      },
+      {
+        "id": 119131,
+        "title": "شمارهٔ ۷",
+        "urlSlug": "sh7",
+        "excerpt": "پس آنجا یکی دیر دیدم رفیع",
+        "mainSections": null
+      },
+      {
+        "id": 119132,
+        "title": "شمارهٔ ۸",
+        "urlSlug": "sh8",
+        "excerpt": "بجایش نباشد یکی مدرسه",
+        "mainSections": null
+      },
+      {
+        "id": 119133,
+        "title": "شمارهٔ ۹",
+        "urlSlug": "sh9",
+        "excerpt": "به ناگه دمید از افق صبح عید",
+        "mainSections": null
+      },
+      {
+        "id": 119134,
+        "title": "شمارهٔ ۱۰",
+        "urlSlug": "sh10",
+        "excerpt": "که هم مسجدی دیدم آنجا بدیع",
+        "mainSections": null
+      },
+      {
+        "id": 119135,
+        "title": "شمارهٔ ۱۱",
+        "urlSlug": "sh11",
+        "excerpt": "یکی بتکده دیدم آنجا دگر",
+        "mainSections": null
+      },
+      {
+        "id": 119136,
+        "title": "شمارهٔ ۱۲",
+        "urlSlug": "sh12",
+        "excerpt": "پس از بتکده کآن زمین گشت قاع",
+        "mainSections": null
+      },
+      {
+        "id": 119137,
+        "title": "شمارهٔ ۱۳",
+        "urlSlug": "sh13",
+        "excerpt": "چو محمود شه غازی غزنوی",
+        "mainSections": null
+      },
+      {
+        "id": 119138,
+        "title": "شمارهٔ ۱۴",
+        "urlSlug": "sh14",
+        "excerpt": "شنیدم که در آفتاب تموز",
+        "mainSections": null
+      },
+      {
+        "id": 119139,
+        "title": "شمارهٔ ۱۵ - و له فی الحکایت",
+        "urlSlug": "sh15",
+        "excerpt": "شنیدم که از گردش آسمان",
+        "mainSections": null
+      },
+      {
+        "id": 119140,
+        "title": "شمارهٔ ۱۶",
+        "urlSlug": "sh16",
+        "excerpt": "شنیدم که در عهد تیموریان",
+        "mainSections": null
+      },
+      {
+        "id": 119141,
+        "title": "شمارهٔ ۱۷ - حکایت",
+        "urlSlug": "sh17",
+        "excerpt": "شنیدم یکی از ملوک کیان",
+        "mainSections": null
+      },
+      {
+        "id": 119142,
+        "title": "شمارهٔ ۱۸ - حکایت",
+        "urlSlug": "sh18",
+        "excerpt": "امیری امارت خدا‌داده داشت",
+        "mainSections": null
+      },
+      {
+        "id": 119143,
+        "title": "شمارهٔ ۱۹ - حکایت",
+        "urlSlug": "sh19",
+        "excerpt": "شبانگاه برگشته بختی بخیل",
+        "mainSections": null
+      },
+      {
+        "id": 119144,
+        "title": "شمارهٔ ۲۰",
+        "urlSlug": "sh20",
+        "excerpt": "کشاورزی از روستای خجند",
+        "mainSections": null
+      },
+      {
+        "id": 119145,
+        "title": "شمارهٔ ۲۱ - حکایت",
+        "urlSlug": "sh21",
+        "excerpt": "کهن ابلهی، نقشکی تازه بست",
+        "mainSections": null
+      },
+      {
+        "id": 119146,
+        "title": "شمارهٔ ۲۲ - حکایت",
+        "urlSlug": "sh22",
+        "excerpt": "شنیدم، مگر زاهدی زرق‌کوش",
+        "mainSections": null
+      },
+      {
+        "id": 119147,
+        "title": "شمارهٔ ۲۳ - حکایت",
+        "urlSlug": "sh23",
+        "excerpt": "درختی کهن بود در بیشه‌‌ای",
+        "mainSections": null
+      },
+      {
+        "id": 119148,
+        "title": "شمارهٔ ۲۴ - حکایت",
+        "urlSlug": "sh24",
+        "excerpt": "چو مأمون خلافت گرفت از امین",
+        "mainSections": null
+      },
+      {
+        "id": 119149,
+        "title": "شمارهٔ ۲۵ - حکایت",
+        "urlSlug": "sh25",
+        "excerpt": "شنیدم یکی شاه فیروزبخت",
+        "mainSections": null
+      },
+      {
+        "id": 119150,
+        "title": "شمارهٔ ۲۶ - حکایت",
+        "urlSlug": "sh26",
+        "excerpt": "یکی روز رفتم بباغی ز کاخ",
+        "mainSections": null
+      },
+      {
+        "id": 119151,
+        "title": "شمارهٔ ۲۷ - حکایت",
+        "urlSlug": "sh27",
+        "excerpt": "شنیدم یکی روز بر طرف دشت",
+        "mainSections": null
+      },
+      {
+        "id": 119152,
+        "title": "شمارهٔ ۲۸ - حکایت",
+        "urlSlug": "sh28",
+        "excerpt": "یکی روز شهزاده یی نوجوان",
+        "mainSections": null
+      },
+      {
+        "id": 119153,
+        "title": "شمارهٔ ۲۹ - حکایت",
+        "urlSlug": "sh29",
+        "excerpt": "یکی چنگ زن مطرب نغمه ساز",
+        "mainSections": null
+      },
+      {
+        "id": 119154,
+        "title": "شمارهٔ ۳۰ - حکایت",
+        "urlSlug": "sh30",
+        "excerpt": "شنیدم برافروخت نیک اختری",
+        "mainSections": null
+      },
+      {
+        "id": 119155,
+        "title": "شمارهٔ ۳۱ - حکایت",
+        "urlSlug": "sh31",
+        "excerpt": "شنیدم یکی شاه آزاده بخت",
+        "mainSections": null
+      },
+      {
+        "id": 119156,
+        "title": "شمارهٔ ۳۲ - حکایت",
+        "urlSlug": "sh32",
+        "excerpt": "دو زن داشت مردی دو مو، پیش ازین",
+        "mainSections": null
+      },
+      {
+        "id": 119157,
+        "title": "شمارهٔ ۳۳ - حکایت",
+        "urlSlug": "sh33",
+        "excerpt": "شنیدم دو کس با هم از دوستان",
+        "mainSections": null
+      },
+      {
+        "id": 119158,
+        "title": "شمارهٔ ۳۴ - حکایت",
+        "urlSlug": "sh34",
+        "excerpt": "شنیدم ز شیبانیان غیور",
+        "mainSections": null
+      },
+      {
+        "id": 119159,
+        "title": "شمارهٔ ۳۵ - حکایت",
+        "urlSlug": "sh35",
+        "excerpt": "یکی تاجر از شهر خود شد روان",
+        "mainSections": null
+      },
+      {
+        "id": 119160,
+        "title": "شمارهٔ ۳۶ - حکایت",
+        "urlSlug": "sh36",
+        "excerpt": "شنیدم که فردوسی نیکبخت",
+        "mainSections": null
+      },
+      {
+        "id": 119161,
+        "title": "شمارهٔ ۳۷ - حکایت",
+        "urlSlug": "sh37",
+        "excerpt": "چو بیدار شد زاهد از خواب شاد",
+        "mainSections": null
+      },
+      {
+        "id": 119162,
+        "title": "شمارهٔ ۳۸ - حکایت",
+        "urlSlug": "sh38",
+        "excerpt": "شنیدم یکی از بزرگان عصر",
+        "mainSections": null
+      },
+      {
+        "id": 119163,
+        "title": "شمارهٔ ۳۹ - حکایت",
+        "urlSlug": "sh39",
+        "excerpt": "به گیلان کهن‌فحلی از راستان",
+        "mainSections": null
+      },
+      {
+        "id": 119164,
+        "title": "شمارهٔ ۴۰ - حکایت",
+        "urlSlug": "sh40",
+        "excerpt": "شنیدم که نادر شه سنگدل",
+        "mainSections": null
+      },
+      {
+        "id": 119165,
+        "title": "شمارهٔ ۴۱ - حکایت",
+        "urlSlug": "sh41",
+        "excerpt": "بمن دوستی گفت از دوستان",
+        "mainSections": null
+      },
+      {
+        "id": 119166,
+        "title": "شمارهٔ ۴۲ - حکایت",
+        "urlSlug": "sh42",
+        "excerpt": "چنین یاد دارم که در اصفهان",
+        "mainSections": null
+      },
+      {
+        "id": 119167,
+        "title": "شمارهٔ ۴۳ - حکایت",
+        "urlSlug": "sh43",
+        "excerpt": "شنیدم که طمقاج با داد و دین",
+        "mainSections": null
+      },
+      {
+        "id": 119168,
+        "title": "شمارهٔ ۴۴ - حکایت",
+        "urlSlug": "sh44",
+        "excerpt": "شنیدم شهی کز ستم عار داشت",
+        "mainSections": null
+      },
+      {
+        "id": 119169,
+        "title": "شمارهٔ ۴۵ - حکایت",
+        "urlSlug": "sh45",
+        "excerpt": "شنیدم یکی از ملوک عجم",
+        "mainSections": null
+      },
+      {
+        "id": 119170,
+        "title": "شمارهٔ ۴۶ - حکایت",
+        "urlSlug": "sh46",
+        "excerpt": "بخیلی شنیدم یکی روز، چاشت",
+        "mainSections": null
+      },
+      {
+        "id": 119171,
+        "title": "شمارهٔ ۴۷ - حکایت",
+        "urlSlug": "sh47",
+        "excerpt": "شنیدم که: آزاده یی پاک زاد",
+        "mainSections": null
+      },
+      {
+        "id": 119172,
+        "title": "شمارهٔ ۴۸ - حکایت",
+        "urlSlug": "sh48",
+        "excerpt": "جهانگردی از خیل کارآگهان",
+        "mainSections": null
+      },
+      {
+        "id": 119173,
+        "title": "شمارهٔ ۴۹ - حکایت",
+        "urlSlug": "sh49",
+        "excerpt": "شنیدم عضد خسرو دیلمی",
+        "mainSections": null
+      },
+      {
+        "id": 119174,
+        "title": "شمارهٔ ۵۰ - حکایت",
+        "urlSlug": "sh50",
+        "excerpt": "در ایام قطب زمان بایزید",
+        "mainSections": null
+      },
+      {
+        "id": 119175,
+        "title": "شمارهٔ ۵۱",
+        "urlSlug": "sh51",
+        "excerpt": "شبی خوشتر از روز با دوستان",
+        "mainSections": null
+      },
+      {
+        "id": 119176,
+        "title": "شمارهٔ ۵۲ - حکایت",
+        "urlSlug": "sh52",
+        "excerpt": "شنیدم که بدخو زنی بد کنش",
+        "mainSections": null
+      },
+      {
+        "id": 119177,
+        "title": "شمارهٔ ۵۳ - حکایت",
+        "urlSlug": "sh53",
+        "excerpt": "بفرمان حجاج شوریده بخت",
+        "mainSections": null
+      },
+      {
+        "id": 119178,
+        "title": "شمارهٔ ۵۴ - حکایت",
+        "urlSlug": "sh54",
+        "excerpt": "شنیدم که مولای مردان علی",
+        "mainSections": null
+      },
+      {
+        "id": 119179,
+        "title": "شمارهٔ ۵۵ - حکایت",
+        "urlSlug": "sh55",
+        "excerpt": "جوانی زنی دید بر رخ نقاب",
+        "mainSections": null
+      },
+      {
+        "id": 119180,
+        "title": "شمارهٔ ۵۶ - حکایت",
+        "urlSlug": "sh56",
+        "excerpt": "شنیدم یکی شهر معمور بود",
+        "mainSections": null
+      },
+      {
+        "id": 119181,
+        "title": "شمارهٔ ۵۷ - حکایت",
+        "urlSlug": "sh57",
+        "excerpt": "ازین پیش چندی ز شاه جهان",
+        "mainSections": null
+      },
+      {
+        "id": 119182,
+        "title": "شمارهٔ ۵۸ - حکایت",
+        "urlSlug": "sh58",
+        "excerpt": "هست مروی در احادیث حسن",
+        "mainSections": null
+      }
+    ],
+    "paperSources": null,
+    "newImage": null
+  }
+}
