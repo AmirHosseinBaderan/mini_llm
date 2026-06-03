@@ -9,6 +9,7 @@ from storage.state_storage import StateStorage
 from processors.poem_processor import PoemProcessor
 from dataset.exporter import DatasetExporter
 
+from tokenizer.train_tokenizer import TokenizerTrainer
 
 def build_crawler():
     return GanjoorCrawler(
@@ -27,6 +28,9 @@ def build_processor():
 def build_exporter():
     return DatasetExporter(    )
 
+def build_train_tokenizer():
+    return TokenizerTrainer()
+
 
 def main():
 
@@ -39,6 +43,7 @@ crawl_all
 process
 export
 pipeline
+train_tokenizer
 """
         )
         return
@@ -70,6 +75,10 @@ pipeline
 
         exporter = build_exporter()
         exporter.export()
+        
+    elif "train_tokenizer":
+        trainer = build_train_tokenizer()
+        trainer.train()
 
     else:
         print(f"Unknown command: {command}")
