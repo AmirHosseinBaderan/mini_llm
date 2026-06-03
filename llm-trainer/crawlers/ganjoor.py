@@ -1,5 +1,6 @@
 from storage.raw_storage import RawStorage
 from storage.state_storage import StateStorage
+from processors.poem_processor import PoemProcessor
 
 
 class GanjoorCrawler:
@@ -14,9 +15,8 @@ class GanjoorCrawler:
         self.client = client
         self.raw_storage = raw_storage
         self.state_storage = state_storage
+        self.processor = PoemProcessor()
 
-        self.state = state_storage.load()
-        
         self.state = state_storage.load()
 
         self.state.setdefault(
@@ -39,28 +39,24 @@ class GanjoorCrawler:
             self.state
         )
         
-    def crawl_poem(
-        self,
-        poem_id: int
-    ):
-
+    def crawl_poem(self, poem_id: int):
         if poem_id in self.state["poems_completed"]:
             return
-
-        poem = self.client.get_poem(
-            poem_id
-        )
-
+    
+        poem = self.client.get_poem(poem_id)
+        processed = self.processor.build(poem)
+    
         self.raw_storage.save(
             "poems",
             poem_id,
-            poem
+            {
+                "raw": poem,
+                "processed": processed
+            }
         )
-
-        self.state[
-            "poems_completed"
-        ].append(poem_id)
-
+    
+        self.state["poems_completed"].append(poem_id)
+    
         self.save_state()
         
     def crawl_category(

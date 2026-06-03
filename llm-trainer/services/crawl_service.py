@@ -1,1 +1,0 @@
-from crawlers.ganjoor_client import GanjoorClient
