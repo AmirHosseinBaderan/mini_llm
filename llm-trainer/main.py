@@ -12,6 +12,7 @@ from dataset.exporter import DatasetExporter
 from tokenizer.train_tokenizer import TokenizerTrainer
 
 from tokenizer.tokenize_dataset import DatasetTokenizer
+from training.build_bins import BinBuilder
 
 def build_crawler():
     return GanjoorCrawler(
@@ -36,6 +37,9 @@ def build_train_tokenizer():
 def build_tokenizer():
     return DatasetTokenizer()
 
+def build_bins():
+    return BinBuilder()
+
 
 def main():
 
@@ -50,6 +54,7 @@ export
 pipeline
 train_tokenizer
 tokenize
+build_bins
 """
         )
         return
@@ -89,6 +94,10 @@ tokenize
     elif command == "tokenize":
         tokenizer = build_tokenizer()
         tokenizer.run()
+
+    elif command == "build_bins":
+        builder = build_bins()
+        builder.run()
 
     else:
         print(f"Unknown command: {command}")
