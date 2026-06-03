@@ -1,4 +1,6 @@
+import json
 import torch
+import os
 
 from torch.utils.data import DataLoader
 
@@ -6,24 +8,35 @@ from training.dataset import TokenDataset
 from training.model import MiniGPT
 
 
+def load_tokens_from_jsonl(path: str):
+    tokens = []
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+
+            obj = json.loads(line)
+            tokens.extend(obj)
+
+    return tokens
+
+
 def train():
 
-    with open(
-        "data/datasets/tokens.txt",
-        encoding="utf-8"
-    ) as f:
+    tokens = load_tokens_from_jsonl(
+        "data/datasets/tokens.jsonl"
+    )
 
-        tokens = list(
-            map(
-                int,
-                f.read().split()
-            )
-        )
+    print(f"Loaded tokens: {len(tokens)}")
 
     VOCAB_SIZE = 16000
     BLOCK_SIZE = 128
     BATCH_SIZE = 16
     EPOCHS = 5
+    
+    torch.set_num_threads(os.cpu_count())
+    torch.set_num_interop_threads(os.cpu_count())
 
     dataset = TokenDataset(
         tokens,
@@ -32,8 +45,10 @@ def train():
 
     loader = DataLoader(
         dataset,
-        batch_size=BATCH_SIZE,
-        shuffle=True
+        batch_size=16,
+        shuffle=True,
+        num_workers=os.cpu_count(),
+        pin_memory=False
     )
 
     device = "cpu"
@@ -55,7 +70,6 @@ def train():
     for epoch in range(EPOCHS):
 
         model.train()
-
         total_loss = 0
 
         for step, (x, y) in enumerate(loader):
@@ -71,9 +85,7 @@ def train():
             )
 
             optimizer.zero_grad()
-
             loss.backward()
-
             optimizer.step()
 
             total_loss += loss.item()
@@ -91,3 +103,5 @@ def train():
         model.state_dict(),
         "training/model.pt"
     )
+
+    print("Model saved ✔")
