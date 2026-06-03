@@ -21,9 +21,12 @@ class TokenizerTrainer:
         ):
             for line in dataset:
                 doc = json.loads(line)
-                text = doc["text"].replace("\n"," ")
-                corpus.write(text)
-                corpus.write("\n")
+
+                if doc["type"] != "corpus":
+                    continue
+                
+                text = doc["text"].replace("\n", " ")
+                corpus.write(text + "\n")
                 
             return corpus_path
     
@@ -35,7 +38,7 @@ class TokenizerTrainer:
             model_prefix=str(
                 self.output_dir / "ganjoor"
             ),
-            vocab_size=32000,
+            vocab_size=14087,
             model_type="bpe",
-            character_converge=1.0
+            character_coverage=1.0
         )
