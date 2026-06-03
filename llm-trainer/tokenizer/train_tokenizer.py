@@ -21,11 +21,26 @@ class TokenizerTrainer:
         ):
             for line in dataset:
                 doc = json.loads(line)
-
-                if doc["type"] != "corpus":
+            
+                if doc["type"] == "corpus":
+                
+                    text = doc["text"]
+            
+                elif doc["type"] == "instruction":
+                
+                    text = (
+                        doc["instruction"]
+                        + "\n"
+                        + doc["input"]
+                        + "\n"
+                        + doc["output"]
+                    )
+            
+                else:
                     continue
                 
-                text = doc["text"].replace("\n", " ")
+                text = text.replace("\n", " ")
+            
                 corpus.write(text + "\n")
                 
             return corpus_path

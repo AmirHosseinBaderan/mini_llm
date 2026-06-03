@@ -1,69 +1,71 @@
 import json
-import struct
 from pathlib import Path
 
-from tokenizer.tokenizer_loader import Tokenizer
+import sentencepiece as spm
+
 
 class DatasetTokenizer:
+
     def __init__(
         self,
-        dataset_path="data/datasets/mixed.jsonl"
+        model_path="tokenizer/vocab/ganjoor.model",
+        dataset_path="data/datasets/mixed.jsonl",
+        output_path="data/datasets/tokens.jsonl"
     ):
+        self.model_path = model_path
+        self.dataset_path = Path(dataset_path)
+        self.output_path = Path(output_path)
 
-        self.dataset_path = Path(
-            dataset_path
-        )
+    def build_text(self, doc):
 
-        self.output_dir = Path(
-            "data/tokenized"
-        )
+        if doc["type"] == "corpus":
+            return doc["text"]
 
-        self.output_dir.mkdir(
-            parents=True,
-            exist_ok=True
-        )
+        if doc["type"] == "instruction":
+            return (
+                f"### Instruction\n"
+                f"{doc['instruction']}\n\n"
+                f"### Input\n"
+                f"{doc['input']}\n\n"
+                f"### Response\n"
+                f"{doc['output']}"
+            )
 
-        self.tokenizer = Tokenizer()
-        
+        return ""
+
     def run(self):
 
-        bin_path = self.output_dir / "train.bin"
-        idx_path = self.output_dir / "train.idx"
+        sp = spm.SentencePieceProcessor(
+            model_file=self.model_path
+        )
 
-        offset = 0
+        with open(
+            self.dataset_path,
+            "r",
+            encoding="utf-8"
+        ) as source, open(
+            self.output_path,
+            "w",
+            encoding="utf-8"
+        ) as target:
 
-        with open(bin_path, "wb") as bin_file:
+            for line in source:
 
-            with open(idx_path, "wb") as idx_file:
+                doc = json.loads(line)
 
-                with open(
-                    self.dataset_path,
-                    "r",
-                    encoding="utf-8"
-                ) as dataset:
+                text = self.build_text(doc)
 
-                    for line in dataset:
+                token_ids = sp.encode(
+                    text,
+                    out_type=int
+                )
 
-                        doc = json.loads(line)
+                target.write(
+                    json.dumps(
+                        token_ids,
+                        ensure_ascii=False
+                    )
+                    + "\n"
+                )
 
-                        tokens = self.tokenizer.encode(
-                            doc["text"]
-                        )
-
-                        idx_file.write(
-                            struct.pack(
-                                "<Q",
-                                offset
-                            )
-                        )
-
-                        for token in tokens:
-
-                            bin_file.write(
-                                struct.pack(
-                                    "<I",
-                                    token
-                                )
-                            )
-
-                        offset += len(tokens)
+        print("Tokenization completed")
