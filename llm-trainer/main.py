@@ -13,6 +13,8 @@ from tokenizer.train_tokenizer import TokenizerTrainer
 
 from tokenizer.tokenize_dataset import DatasetTokenizer
 from training.build_bins import BinBuilder
+from training.generate import Generator
+
 
 def build_crawler():
     return GanjoorCrawler(
@@ -40,6 +42,9 @@ def build_tokenizer():
 def build_bins():
     return BinBuilder()
 
+def build_gen():
+    return Generator()
+
 
 def main():
 
@@ -56,6 +61,7 @@ train_tokenizer
 tokenize
 build_bins
 train
+generate
 """
         )
         return
@@ -103,6 +109,12 @@ train
     elif command == "train":
         from training.train import train
         train()
+        
+    elif command == "generate":
+        generator = build_gen()
+        prompt = input("prompt : ")
+        response = generator.generate(prompt)
+        print(response)
     else:
         print(f"Unknown command: {command}")
 
