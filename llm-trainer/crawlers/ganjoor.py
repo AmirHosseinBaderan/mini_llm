@@ -1,7 +1,8 @@
 from storage.raw_storage import RawStorage
 from storage.state_storage import StateStorage
 from processors.poem_processor import PoemProcessor
-
+from dataset.builder import DatasetBuilder
+    
 
 class GanjoorCrawler:
 
@@ -18,7 +19,8 @@ class GanjoorCrawler:
         self.processor = PoemProcessor()
 
         self.state = state_storage.load()
-
+        self.dataset_builder = DatasetBuilder()
+        
         self.state.setdefault(
             "poets_completed",
             []
@@ -45,13 +47,23 @@ class GanjoorCrawler:
     
         poem = self.client.get_poem(poem_id)
         processed = self.processor.build(poem)
-    
+        dataset_samples = self.dataset_builder.build_all(processed)
+        
         self.raw_storage.save(
             "poems",
             poem_id,
             {
                 "raw": poem,
                 "processed": processed
+            }
+        )
+        
+        self.raw_storage.save(
+            "dataset",
+            poem_id,
+            {
+                "poem": processed,
+                "samples": dataset_samples
             }
         )
     
