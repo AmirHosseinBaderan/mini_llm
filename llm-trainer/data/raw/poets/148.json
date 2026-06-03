@@ -1,0 +1,21 @@
+{
+  "id": 148,
+  "name": "آذر بیگدلی",
+  "description": null,
+  "fullUrl": "/azar",
+  "rootCatId": 2738,
+  "nickname": "آذر بیگدلی",
+  "published": true,
+  "imageUrl": "/api/ganjoor/poet/image/azar.gif",
+  "birthYearInLHijri": 1134,
+  "validBirthDate": true,
+  "deathYearInLHijri": 1195,
+  "validDeathDate": true,
+  "pinOrder": 0,
+  "birthPlace": "اصفهان",
+  "birthPlaceLatitude": 32.6539,
+  "birthPlaceLongitude": 51.666,
+  "deathPlace": "قم",
+  "deathPlaceLatitude": 34.6416,
+  "deathPlaceLongitude": 50.8746
+}
