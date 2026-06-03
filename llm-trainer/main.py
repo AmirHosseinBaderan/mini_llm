@@ -55,6 +55,7 @@ pipeline
 train_tokenizer
 tokenize
 build_bins
+train
 """
         )
         return
@@ -99,6 +100,9 @@ build_bins
         builder = build_bins()
         builder.run()
 
+    elif command == "train":
+        from training.train import train
+        train()
     else:
         print(f"Unknown command: {command}")
 
