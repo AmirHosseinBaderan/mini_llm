@@ -11,6 +11,8 @@ from dataset.exporter import DatasetExporter
 
 from tokenizer.train_tokenizer import TokenizerTrainer
 
+from tokenizer.tokenize_dataset import DatasetTokenizer
+
 def build_crawler():
     return GanjoorCrawler(
         GanjoorClient(),
@@ -31,6 +33,9 @@ def build_exporter():
 def build_train_tokenizer():
     return TokenizerTrainer()
 
+def build_tokenizer():
+    return DatasetTokenizer()
+
 
 def main():
 
@@ -44,6 +49,7 @@ process
 export
 pipeline
 train_tokenizer
+tokenize
 """
         )
         return
@@ -79,6 +85,10 @@ train_tokenizer
     elif "train_tokenizer":
         trainer = build_train_tokenizer()
         trainer.train()
+        
+    elif "tokenize":
+        tokenizer = build_tokenizer()
+        tokenizer.run()
 
     else:
         print(f"Unknown command: {command}")
