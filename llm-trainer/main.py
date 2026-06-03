@@ -1,9 +1,14 @@
 from crawlers.ganjoor import GanjoorCrawler
+from crawlers.ganjoor_client import GanjoorClient
 
-crawler = GanjoorCrawler()
-poets = crawler.get_poets()
+from storage.raw_storage import RawStorage
+from storage.state_storage import StateStorage
 
-print(f"Poets count : {len(poets)}")
 
-for poet in poets[:10]:
-    print(poet)
+crawler = GanjoorCrawler(
+    GanjoorClient(),
+    RawStorage(),
+    StateStorage()
+)
+
+crawler.crawl_all()
