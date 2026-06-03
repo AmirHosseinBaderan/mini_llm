@@ -82,11 +82,11 @@ tokenize
         exporter = build_exporter()
         exporter.export()
         
-    elif "train_tokenizer":
+    elif command == "train_tokenizer":
         trainer = build_train_tokenizer()
         trainer.train()
         
-    elif "tokenize":
+    elif command == "tokenize":
         tokenizer = build_tokenizer()
         tokenizer.run()
 
