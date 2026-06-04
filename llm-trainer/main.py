@@ -25,9 +25,7 @@ def build_crawler():
 
 
 def build_processor():
-    return PoemProcessor(
-        RawStorage()
-    )
+    return PoemProcessor()
 
 
 def build_exporter():
