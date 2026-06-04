@@ -36,7 +36,12 @@ def build_bins():
     return BinBuilder()
 
 def build_gen():
-    return Generator()
+    return Generator(
+        model_path="training/model.pt",
+        sp_model_path="tokenizer/vocab/ganjoor.model",
+        vocab_size=16000,
+        block_size=128
+    )
 
 
 def main():
