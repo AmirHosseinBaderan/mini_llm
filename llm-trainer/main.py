@@ -23,11 +23,6 @@ def build_crawler():
         StateStorage()
     )
 
-
-def build_processor():
-    return PoemProcessor()
-
-
 def build_exporter():
     return DatasetExporter(    )
 
@@ -51,15 +46,13 @@ def main():
             """
 Commands:
 
-crawl_all
-process
-export
-pipeline
-train_tokenizer
-tokenize
-build_bins
-train
-generate
+1. crawl_all
+2. export
+3. train_tokenizer
+4. tokenize
+5. build_bins
+6. train
+7. generate
 """
         )
         return
@@ -71,23 +64,7 @@ generate
         crawler = build_crawler()
         crawler.crawl_all()
 
-    elif command == "process":
-
-        processor = build_processor()
-        processor.process_all()
-
     elif command == "export":
-
-        exporter = build_exporter()
-        exporter.export()
-
-    elif command == "pipeline":
-
-        crawler = build_crawler()
-        crawler.crawl_all()
-
-        processor = build_processor()
-        processor.process_all()
 
         exporter = build_exporter()
         exporter.export()
