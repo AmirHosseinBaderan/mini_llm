@@ -90,10 +90,10 @@ def train():
 
             total_loss += loss.item()
 
-            if step % 100 == 0:
-                print(
-                    f"epoch={epoch} step={step} loss={loss.item():.4f}"
-                )
+            #if step % 100 == 0:
+            print(
+                f"epoch={epoch} step={step} loss={loss.item():.4f}"
+            )
 
         print(
             f"epoch={epoch} avg_loss={total_loss/len(loader):.4f}"
