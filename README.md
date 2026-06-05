@@ -41,6 +41,177 @@ Commands:
 8. **Training** (`training/train.py`): Trains MiniGPT transformer model
 9. **Generation** (`training/generate.py`): Generates Persian poetry using trained model
 
+## Environment Setup
+
+### Prerequisites
+
+- Python 3.10 or higher
+- pip (Python package manager)
+- Git (optional, for cloning the repository)
+
+### Installation on Linux
+
+#### 1. Clone or navigate to the project
+
+```bash
+cd llm-trainer
+```
+
+#### 2. Create and activate a virtual environment
+
+```bash
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate virtual environment
+source .venv/bin/activate
+```
+
+#### 3. Install dependencies
+
+**For CPU only:**
+```bash
+pip install -r requirements.txt
+```
+
+**For GPU (NVIDIA CUDA):**
+```bash
+# Ensure NVIDIA drivers are installed
+nvidia-smi
+
+# Install PyTorch with CUDA support first
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Then install remaining dependencies
+pip install -r requirements.txt
+```
+
+#### 4. Verify installation
+
+```bash
+python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA available: {torch.cuda.is_available()}')"
+```
+
+### Installation on macOS
+
+#### 1. Clone or navigate to the project
+
+```bash
+cd llm-trainer
+```
+
+#### 2. Create and activate a virtual environment
+
+```bash
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate virtual environment
+source .venv/bin/activate
+```
+
+#### 3. Install dependencies
+
+**For CPU only (Apple Silicon or Intel):**
+```bash
+pip install -r requirements.txt
+```
+
+**For GPU (Apple Silicon M1/M2/M3 - Metal acceleration):**
+```bash
+# Install PyTorch with Metal support
+pip install torch torchvision torchaudio
+
+# Then install remaining dependencies
+pip install -r requirements.txt
+```
+
+**Note:** On Apple Silicon Macs, PyTorch automatically uses Metal Performance Shaders (MPS) for GPU acceleration. The training script will detect and use `mps` device when available.
+
+#### 4. Verify installation
+
+```bash
+python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'MPS available: {torch.backends.mps.is_available()}')"
+```
+
+### Installation on Windows
+
+#### 1. Clone or navigate to the project
+
+```bash
+cd llm-trainer
+```
+
+#### 2. Create and activate a virtual environment
+
+```powershell
+# Using Command Prompt
+python -m venv .venv
+.venv\Scripts\activate
+
+# Using PowerShell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+# Using Git Bash
+python -m venv .venv
+source .venv/Scripts/activate
+```
+
+#### 3. Install dependencies
+
+**For CPU only:**
+```bash
+pip install -r requirements.txt
+```
+
+**For GPU (NVIDIA CUDA):**
+```bash
+# Install PyTorch with CUDA support first
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Then install remaining dependencies
+pip install -r requirements.txt
+```
+
+**Prerequisites for GPU on Windows:**
+- NVIDIA GPU with CUDA support
+- NVIDIA GeForce Game Ready Driver or Studio Driver (latest version)
+- CUDA Toolkit 11.8 or 12.1 (depending on PyTorch version)
+
+#### 4. Verify installation
+
+```bash
+python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA available: {torch.cuda.is_available()}')"
+```
+
+### CPU vs GPU Configuration
+
+The project automatically detects and uses the best available device:
+
+| Platform | Device Priority | Notes |
+|----------|----------------|-------|
+| Linux with NVIDIA GPU | `cuda` | Full GPU acceleration with AMP |
+| Windows with NVIDIA GPU | `cuda` | Full GPU acceleration with AMP |
+| macOS Apple Silicon | `mps` | Metal Performance Shaders acceleration |
+| macOS Intel | `cpu` | No GPU acceleration available |
+| Any platform without GPU | `cpu` | Slower training, no AMP |
+
+#### GPU-Specific Features
+
+When GPU is available, the training script (`training/train.py`) automatically:
+- Uses CUDA device (`torch.device("cuda")`)
+- Enables Automatic Mixed Precision (AMP) via `torch.amp.autocast`
+- Uses `GradScaler` for stable gradient computation
+- Prints GPU name and device info
+
+#### CPU-Only Training
+
+Training on CPU will work but is significantly slower. To optimize CPU training:
+- Reduce `BATCH_SIZE` in `training/train.py` (e.g., from 32 to 8 or 4)
+- Reduce `EPOCHS` for testing (e.g., from 5 to 2)
+- The project automatically disables AMP on CPU
+
 ### Quick Start Example
 
 ```bash
@@ -158,3 +329,29 @@ llm-trainer/
 ├── models/            # Data models (Poem, Category)
 └── validators/        # Dataset validation
 ```
+
+## Troubleshooting
+
+### Common Issues
+
+**CUDA out of memory:**
+- Reduce `BATCH_SIZE` in `training/train.py`
+- Reduce `BLOCK_SIZE` in `training/config.py`
+
+**SentencePiece installation fails:**
+- On Linux: `sudo apt-get install cmake`
+- On Windows: Install Visual Studio Build Tools
+
+**Import errors:**
+- Ensure virtual environment is activated
+- Run `pip install -r requirements.txt` again
+
+**Permission errors on Linux/macOS:**
+- Ensure you have write permissions in the project directory
+- Run `chmod -R 755 .` if needed
+
+### Notes
+
+- The first run (`crawl_all`) may take several hours depending on your internet connection and the amount of poetry data
+- Training on CPU can take significantly longer than GPU
+- The trained model files are saved in the `training/` directory
